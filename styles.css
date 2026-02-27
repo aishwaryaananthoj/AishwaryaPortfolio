@@ -353,16 +353,32 @@ section.revealed {
     50% { transform: scale(1.1); opacity: 0.8; }
 }
 
-.hero .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
 }
 
 .hero-content {
     z-index: 1;
-    text-align: center;
-    max-width: 900px;
+    text-align: left;
+}
+
+/* Hero Interests Side */
+.hero-interests-side {
+    z-index: 1;
+}
+
+.hero-interests-side .terminal-line-interests {
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.interests-boxes-vertical {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
 
 /* Hero Info Section */
@@ -376,9 +392,7 @@ section.revealed {
     padding: 1.5rem;
     border: 1px solid rgba(0, 255, 136, 0.2);
     transition: all 0.3s;
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
+    text-align: left;
 }
 
 .hero-info-item-single:hover {
@@ -428,33 +442,55 @@ section.revealed {
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
+    justify-content: center;
 }
 
 .terminal-line-interests .terminal-prompt {
     color: var(--accent-primary);
     font-weight: bold;
     font-family: 'Courier New', monospace;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .terminal-line-interests .terminal-command {
     color: var(--accent-secondary);
     font-family: 'Courier New', monospace;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .interests-grid-boxes {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .interest-box {
     background: var(--bg-secondary);
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 1.5rem;
     border: 1px solid rgba(0, 255, 136, 0.2);
     transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.interest-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+}
+
+.interest-box:hover::before {
+    transform: scaleX(1);
 }
 
 .interest-box:hover {
@@ -465,18 +501,20 @@ section.revealed {
 
 .interest-icon-box {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
+    display: inline-block;
 }
 
 .interest-box h3 {
     color: var(--accent-primary);
-    font-size: 1.2rem;
-    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    font-weight: 600;
 }
 
 .interest-box p {
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.6;
 }
 
@@ -531,7 +569,7 @@ h2.typing-text {
     display: flex;
     gap: 1rem;
     margin-top: 1.5rem;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .btn {
@@ -1208,7 +1246,7 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero .container,
+    .hero-grid,
     .about-content,
     .contact-content {
         grid-template-columns: 1fr;
@@ -1238,5 +1276,21 @@ section {
     
     .interests-grid-boxes {
         grid-template-columns: 1fr;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+    }
+    
+    .hero-info-item-single {
+        text-align: center;
+    }
+    
+    .hero-interests-side .terminal-line-interests {
+        justify-content: center;
     }
 }
