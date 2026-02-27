@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aishwarya A | Site Reliability Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cursor Trail -->
+    <canvas id="cursorCanvas"></canvas>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Floating Action Button -->
+    <button class="fab" id="scrollToTop" aria-label="Scroll to top">
+        <span class="fab-icon">↑</span>
+    </button>
+
+    <!-- Glowing Orbs -->
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+
+    <!-- Decorative Side Elements -->
+    <div class="side-decoration left">
+        <pre>
+// Kubernetes
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sre-pod
+spec:
+  containers:
+  - name: app
+    image: golang:latest
+    
+// Monitoring
+prometheus:
+  scrape_interval: 30s
+  evaluation_interval: 30s
+  
+// Automation
+- hosts: all
+  tasks:
+    - name: Deploy
+      ansible.builtin.shell:
+        cmd: kubectl apply
+        </pre>
+    </div>
+    
+    <div class="side-decoration right">
+        <pre>
+# Python Automation
+def monitor_cluster():
+    while True:
+        health = check_health()
+        if health < 99:
+            alert.trigger()
+            
+# Infrastructure
+resource "kubernetes_deployment" {
+  metadata {
+    name = "app"
+  }
+}
+
+# CI/CD Pipeline
+pipeline:
+  stages:
+    - build
+    - test
+    - deploy
+        </pre>
+    </div>
+
+    <!-- Terminal-style header -->
+    <div class="terminal-header">
+        <div class="terminal-buttons">
+            <span class="btn-close"></span>
+            <span class="btn-minimize"></span>
+            <span class="btn-maximize"></span>
+        </div>
+        <div class="terminal-title">aishwarya@portfolio:~$</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-content">
+            <div class="logo">./AA</div>
+            <ul class="nav-links">
+                <li><a href="#home" data-section="home">home</a></li>
+                <li><a href="#about" data-section="about">about</a></li>
+                <li><a href="#skills" data-section="skills">skills</a></li>
+                <li><a href="#experience" data-section="experience">experience</a></li>
+                <li><a href="#projects" data-section="projects">projects</a></li>
+                <li><a href="#education" data-section="education">education</a></li>
+                <li><a href="#contact" data-section="contact">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="typing-container">
+                    <span class="prompt">$ whoami</span>
+                    <h1 class="typing-text">Aishwarya A</h1>
+                </div>
+                <div class="typing-container delay-1">
+                    <span class="prompt">$ cat role.txt</span>
+                    <h2 class="typing-text">Site Reliability Engineer II</h2>
+                </div>
+                <div class="typing-container delay-2">
+                    <span class="prompt">$ echo $EXPERTISE</span>
+                    <p class="typing-text">Kubernetes • GoLang • Python • Automation • Observability</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="https://www.linkedin.com/in/a1sh/" target="_blank" class="btn btn-secondary">LinkedIn</a>
+                </div>
+                
+                <!-- Education and Interests -->
+                <div class="hero-info-section">
+                    <div class="hero-info-item-single">
+                        <div class="hero-info-header">
+                            <span class="prompt">$ cat education.txt</span>
+                        </div>
+                        <div class="hero-info-content">
+                            <p class="info-main">Master's in Computer Science</p>
+                            <p class="info-sub">University of Colorado Denver</p>
+                            <p class="info-detail">GPA: 3.7/4.0 | 2022 - 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Areas of Interest - Full Section -->
+        <div class="hero-interests-full">
+            <div class="container">
+                <div class="terminal-line-interests">
+                    <span class="terminal-prompt">$</span>
+                    <span class="terminal-command">echo $INTERESTS</span>
+                </div>
+                <div class="interests-grid-boxes">
+                    <div class="interest-box">
+                        <div class="interest-icon-box">🤖</div>
+                        <h3>Machine Learning Engineering</h3>
+                        <p>Building and deploying scalable ML models, optimizing inference pipelines, and implementing MLOps best practices for production systems.</p>
+                    </div>
+                    <div class="interest-box">
+                        <div class="interest-icon-box">🔄</div>
+                        <h3>MLOps</h3>
+                        <p>Bridging ML and operations through automated model training, versioning, monitoring, and deployment using tools like Kubeflow, MLflow, and custom pipelines.</p>
+                    </div>
+                    <div class="interest-box">
+                        <div class="interest-icon-box">💻</div>
+                        <h3>Full Stack Development</h3>
+                        <p>Creating end-to-end applications with modern frameworks, designing scalable architectures, and building intuitive user experiences.</p>
+                    </div>
+                    <div class="interest-box">
+                        <div class="interest-icon-box">⚙️</div>
+                        <h3>Software Development</h3>
+                        <p>Crafting clean, maintainable code, implementing design patterns, and building robust applications that solve real-world problems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="prompt">$ cat about.md</span>
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="highlight">Site Reliability Engineer who transforms complex infrastructure challenges into automated, scalable solutions.</p>
+                    <p>I've engineered systems that monitor 90+ production Kubernetes clusters, automated deployments across 4500+ servers, and built high-performance applications achieving 99% uptime. My approach combines deep technical expertise in GoLang and Python with a proven track record of reducing manual intervention by up to 90% through intelligent automation.</p>
+                    <p>What sets me apart is my ability to bridge the gap between development velocity and operational stability—implementing GitOps pipelines, designing observability frameworks, and preventing security breaches before they happen. I don't just maintain systems; I architect resilient infrastructure that scales.</p>
+                    <div class="achievements-section">
+                        <h3 class="achievements-title">Recognition & Awards</h3>
+                        <div class="achievement-item award-highlight">
+                            <span class="achievement-icon">🏆</span>
+                            <div class="achievement-details">
+                                <h4>Above and Beyond Award</h4>
+                                <p class="achievement-org">Charter Communications</p>
+                                <p class="achievement-desc">Recognized for exceptional contributions in Q1 2024 and all quarters throughout 2025 for driving operational excellence and innovative automation solutions</p>
+                            </div>
+                        </div>
+                        
+                        <h3 class="achievements-title">Professional Certifications</h3>
+                        <div class="certifications-grid">
+                            <div class="achievement-item cert-item">
+                                <span class="achievement-icon">☸️</span>
+                                <div class="achievement-details">
+                                    <h4>Kubernetes Certified Administrator</h4>
+                                    <p class="achievement-org">Cloud Native Computing Foundation</p>
+                                    <p class="achievement-desc">CKA - Validated expertise in Kubernetes cluster administration, networking, and security</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item cert-item">
+                                <span class="achievement-icon">🐍</span>
+                                <div class="achievement-details">
+                                    <h4>Python 3 Programming</h4>
+                                    <p class="achievement-org">Professional Certification</p>
+                                    <p class="achievement-desc">Advanced Python programming, data structures, and application development</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item cert-item">
+                                <span class="achievement-icon">🤖</span>
+                                <div class="achievement-details">
+                                    <h4>Oracle Certified AI Associate</h4>
+                                    <p class="achievement-org">Oracle Corporation</p>
+                                    <p class="achievement-desc">Foundational knowledge in AI, machine learning concepts, and practical applications</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item cert-item">
+                                <span class="achievement-icon">🔷</span>
+                                <div class="achievement-details">
+                                    <h4>Mendix Certified Developer</h4>
+                                    <p class="achievement-org">Mendix</p>
+                                    <p class="achievement-desc">Low-code application development and rapid application delivery platform expertise</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stats-card">
+                        <h3 class="stats-title">Impact Metrics</h3>
+                        <div class="stat-item">
+                            <div class="stat-number">90+</div>
+                            <div class="stat-label">Production K8s Clusters</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4500+</div>
+                            <div class="stat-label">Servers Automated</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">99%</div>
+                            <div class="stat-label">System Uptime</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">90%</div>
+                            <div class="stat-label">Reduced Manual Work</div>
+                        </div>
+                    </div>
+                    <div class="stats-card">
+                        <h3 class="stats-title">Core Strengths</h3>
+                        <div class="strength-item">
+                            <span class="strength-icon">⚡</span>
+                            <span class="strength-text">Automation & Orchestration</span>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-icon">🔒</span>
+                            <span class="strength-text">Security & Compliance</span>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-icon">📊</span>
+                            <span class="strength-text">Observability & Monitoring</span>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-icon">🚀</span>
+                            <span class="strength-text">CI/CD & GitOps</span>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-icon">☁️</span>
+                            <span class="strength-text">Cloud Infrastructure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section with Moving Tile Bar -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="prompt">$ cat technical_skills.json</span>
+            </h2>
+            <div class="skills-ticker-wrapper">
+                <div class="skills-ticker">
+                    <div class="skills-ticker-track">
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+                        <!-- Programming Languages -->
+                        <div class="skill-tile">
+                            <span class="tile-icon">🐍</span>
+                            <span class="tile-name">Python</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🔵</span>
+                            <span class="tile-name">GoLang</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">☕</span>
+                            <span class="tile-name">Java</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">💲</span>
+                            <span class="tile-name">Bash</span>
+                        </div>
+                        
+                        <!-- Frameworks & Libraries -->
+                        <div class="skill-tile">
+                            <span class="tile-icon">📊</span>
+                            <span class="tile-name">Pandas</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🧮</span>
+                            <span class="tile-name">NumPy</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🤖</span>
+                            <span class="tile-name">TensorFlow</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🎯</span>
+                            <span class="tile-name">Keras</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">👁️</span>
+                            <span class="tile-name">OpenCV</span>
+                        </div>
+                        
+                        <!-- Containers & Orchestration -->
+                        <div class="skill-tile">
+                            <span class="tile-icon">☸️</span>
+                            <span class="tile-name">Kubernetes</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🐳</span>
+                            <span class="tile-name">Docker</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🦭</span>
+                            <span class="tile-name">Podman</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">⚓</span>
+                            <span class="tile-name">Helm</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🐮</span>
+                            <span class="tile-name">Rancher</span>
+                        </div>
+                        
+                        <!-- DevOps & Automation -->
+                        <div class="skill-tile">
+                            <span class="tile-icon">⚙️</span>
+                            <span class="tile-name">Ansible</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🟣</span>
+                            <span class="tile-name">Terraform</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">👨‍✈️</span>
+                            <span class="tile-name">Jenkins</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🦊</span>
+                            <span class="tile-name">GitLab</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🔄</span>
+                            <span class="tile-name">ArgoCD</span>
+                        </div>
+                        
+                        <!-- Monitoring & Observability -->
+                        <div class="skill-tile">
+                            <span class="tile-icon">🔥</span>
+                            <span class="tile-name">Prometheus</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">📈</span>
+                            <span class="tile-name">Grafana</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">📉</span>
+                            <span class="tile-name">InfluxDB</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">📡</span>
+                            <span class="tile-name">Telegraf</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🆉</span>
+                            <span class="tile-name">Zabbix</span>
+                        </div>
+                        
+                        <!-- Databases -->
+                        <div class="skill-tile">
+                            <span class="tile-icon">🐘</span>
+                            <span class="tile-name">PostgreSQL</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🐬</span>
+                            <span class="tile-name">MySQL</span>
+                        </div>
+                        
+                        <!-- APIs & Web -->
+                        <div class="skill-tile">
+                            <span class="tile-icon">⚡</span>
+                            <span class="tile-name">REST API</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">◈</span>
+                            <span class="tile-name">GraphQL</span>
+                        </div>
+                        
+                        <!-- Tools -->
+                        <div class="skill-tile">
+                            <span class="tile-icon">🐸</span>
+                            <span class="tile-name">JFrog</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🛡️</span>
+                            <span class="tile-name">Tanium</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🅹</span>
+                            <span class="tile-name">Jira</span>
+                        </div>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="skills-ticker-track" aria-hidden="true">
+                        <div class="skill-tile">
+                            <span class="tile-icon">🐍</span>
+                            <span class="tile-name">Python</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🔵</span>
+                            <span class="tile-name">GoLang</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">☕</span>
+                            <span class="tile-name">Java</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">💲</span>
+                            <span class="tile-name">Bash</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">📊</span>
+                            <span class="tile-name">Pandas</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🧮</span>
+                            <span class="tile-name">NumPy</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🤖</span>
+                            <span class="tile-name">TensorFlow</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🎯</span>
+                            <span class="tile-name">Keras</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">👁️</span>
+                            <span class="tile-name">OpenCV</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">☸️</span>
+                            <span class="tile-name">Kubernetes</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🐳</span>
+                            <span class="tile-name">Docker</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🦭</span>
+                            <span class="tile-name">Podman</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">⚓</span>
+                            <span class="tile-name">Helm</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🐮</span>
+                            <span class="tile-name">Rancher</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">⚙️</span>
+                            <span class="tile-name">Ansible</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🟣</span>
+                            <span class="tile-name">Terraform</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">👨‍✈️</span>
+                            <span class="tile-name">Jenkins</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🦊</span>
+                            <span class="tile-name">GitLab</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🔄</span>
+                            <span class="tile-name">ArgoCD</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🔥</span>
+                            <span class="tile-name">Prometheus</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">📈</span>
+                            <span class="tile-name">Grafana</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">📉</span>
+                            <span class="tile-name">InfluxDB</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">📡</span>
+                            <span class="tile-name">Telegraf</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🆉</span>
+                            <span class="tile-name">Zabbix</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🐘</span>
+                            <span class="tile-name">PostgreSQL</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🐬</span>
+                            <span class="tile-name">MySQL</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">⚡</span>
+                            <span class="tile-name">REST API</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">◈</span>
+                            <span class="tile-name">GraphQL</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🐸</span>
+                            <span class="tile-name">JFrog</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🛡️</span>
+                            <span class="tile-name">Tanium</span>
+                        </div>
+                        <div class="skill-tile">
+                            <span class="tile-icon">🅹</span>
+                            <span class="tile-name">Jira</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="prompt">$ git log --experience</span>
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Site Reliability Engineer II</h3>
+                            <span class="company">Charter Communications</span>
+                            <span class="duration">Jan 2026 – Present</span>
+                        </div>
+                        <ul class="highlights">
+                            <li>Developed high-performance GoLang application with Prometheus & Rubrik REST API for 99% uptime monitoring</li>
+                            <li>Engineered Python VM restoration automation, reducing manual intervention by 90%</li>
+                            <li>Implemented automated K8s certificate audit system ensuring 100% compliance across 90+ clusters</li>
+                            <li>Orchestrated GitOps pipelines with ArgoCD and Helm for deployment efficiency</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Site Reliability Engineer I</h3>
+                            <span class="company">Charter Communications</span>
+                            <span class="duration">Jun 2023 – Dec 2025</span>
+                        </div>
+                        <ul class="highlights">
+                            <li>Streamlined security deployment by 90% through Ansible automation across 4500+ servers</li>
+                            <li>Created comprehensive Tanium dashboard monitoring 4000+ endpoints</li>
+                            <li>Architected PostgreSQL schemas with Patroni HA framework for high availability</li>
+                            <li>Engineered end-to-end observability pipelines with Telegraf, InfluxDB, and Grafana</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Engineer</h3>
+                            <span class="company">Optum Global Solutions</span>
+                            <span class="duration">Jul 2021 – Nov 2021</span>
+                        </div>
+                        <ul class="highlights">
+                            <li>Developed Java/JDBC solutions achieving 95% efficiency</li>
+                            <li>Production support with SQL and IBM Workload Scheduler</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Site Reliability Engineer</h3>
+                            <span class="company">Infosys</span>
+                            <span class="duration">Jul 2019 – May 2021</span>
+                        </div>
+                        <ul class="highlights">
+                            <li>Deep Linux systems and networking expertise</li>
+                            <li>Upgraded Jenkins pipelines for seamless CI/CD</li>
+                            <li>Proficient in Docker containerization and optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="prompt">$ ls -la ~/projects/</span>
+            </h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Driver Drowsiness Detection</h3>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>YOLOv5</span>
+                            <span>OpenCV</span>
+                            <span>Torch</span>
+                            <span>Twilio API</span>
+                        </div>
+                    </div>
+                    <p>Engineered a real-time deep learning system using custom-trained YOLOv5 model to detect drowsiness indicators including eye closure, yawning, and head position. Implemented automated alert system via Twilio API to notify emergency contacts when drowsiness is detected. Utilized LabelImg for dataset annotation and Google Colab for GPU-accelerated training, processing video streams at 30 FPS for immediate detection.</p>
+                    <div class="project-stats">
+                        <span class="stat">91.02% Accuracy</span>
+                        <span class="stat">Real-time Detection</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Traders Dough</h3>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Android Studio</span>
+                            <span>SQL</span>
+                            <span>Yahoo Finance API</span>
+                        </div>
+                    </div>
+                    <p>Developed a comprehensive stock portfolio management Android application enabling users to track multiple watchlists of stocks and ETFs. Integrated Yahoo Finance API for real-time market data, price alerts, and historical performance charts. Implemented robust SQL database with normalized schema design for efficient data retrieval and portfolio analytics. Features include custom watchlist creation, price tracking, and performance metrics visualization.</p>
+                    <div class="project-stats">
+                        <span class="stat">Real-time Market Data</span>
+                        <span class="stat">Multi-watchlist Support</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Virtual Mouse Using Hand Gestures</h3>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                            <span>MediaPipe</span>
+                            <span>Autopy</span>
+                        </div>
+                    </div>
+                    <p>Built a touchless computer control system using computer vision and hand tracking technology. Leveraged MediaPipe's hand landmark detection to identify 21 hand keypoints in real-time, mapping fingertip positions to screen coordinates. Implemented gesture recognition for click, drag, and scroll operations using finger proximity detection. Optimized frame processing pipeline to achieve smooth cursor movement with minimal latency, enabling hands-free computer interaction.</p>
+                    <div class="project-stats">
+                        <span class="stat">94.34% Accuracy</span>
+                        <span class="stat">Touchless Control</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Image Caption Generator</h3>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>CNN-LSTM</span>
+                            <span>TensorFlow</span>
+                            <span>Keras</span>
+                            <span>NLTK</span>
+                        </div>
+                    </div>
+                    <p>Architected an end-to-end deep learning pipeline combining Convolutional Neural Networks for image feature extraction and Long Short-Term Memory networks for natural language generation. Utilized transfer learning with pre-trained CNN models (VGG16/ResNet) for robust feature encoding. Implemented attention mechanisms to focus on relevant image regions during caption generation. Trained on large-scale image datasets with extensive text preprocessing using NLTK for tokenization and vocabulary building.</p>
+                    <div class="project-stats">
+                        <span class="stat">87.1% Accuracy</span>
+                        <span class="stat">Attention Mechanism</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Mining Frequent Itemsets on Massive Data</h3>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>NumPy</span>
+                            <span>Seaborn</span>
+                        </div>
+                    </div>
+                    <p>Designed and implemented a pre-computation based frequent itemset mining algorithm optimized for massive datasets. Developed an incremental mining approach that leverages previously computed frequent itemsets to efficiently process new data without full recomputation. Applied advanced data structures and pruning strategies to reduce computational complexity. Utilized Pandas for efficient data manipulation and Seaborn for visualization of association rules and support-confidence metrics in market basket analysis.</p>
+                    <div class="project-stats">
+                        <span class="stat">88.9% Accuracy</span>
+                        <span class="stat">Incremental Mining</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="prompt">$ cat education.log</span>
+            </h2>
+            <div class="education-content">
+                <div class="education-card">
+                    <div class="education-icon">🎓</div>
+                    <div class="education-details">
+                        <h3>Master's in Computer Science</h3>
+                        <p class="university">University of Colorado at Denver, CO</p>
+                        <p class="duration">Jan 2022 – Dec 2023</p>
+                        <p class="gpa">GPA: 3.7/4.0</p>
+                        <div class="coursework">
+                            <h4>Key Coursework:</h4>
+                            <div class="course-tags">
+                                <span class="course-tag">Algorithms</span>
+                                <span class="course-tag">Big Data</span>
+                                <span class="course-tag">Deep Learning</span>
+                                <span class="course-tag">Computer Architecture</span>
+                                <span class="course-tag">Software Architecture</span>
+                                <span class="course-tag">Mobile Programming</span>
+                                <span class="course-tag">Operating Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="prompt">$ ./connect.sh</span>
+            </h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Build Something Reliable Together</h3>
+                    <p>I'm always interested in discussing SRE challenges, automation opportunities, and innovative solutions.</p>
+                    <div class="contact-methods">
+                        <a href="mailto:aishwarya.ananthoj@outlook.com" class="contact-item">
+                            <span class="icon">📧</span>
+                            <span>aishwarya.ananthoj@outlook.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/a1sh/" target="_blank" class="contact-item">
+                            <span class="icon">💼</span>
+                            <span>linkedin.com/in/a1sh</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="terminal-contact">
+                    <div class="terminal-window">
+                        <div class="terminal-header-small">
+                            <span>contact.sh</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p><span class="prompt-small">$</span> echo "Available for:"</p>
+                            <p class="terminal-output">→ SRE Consulting</p>
+                            <p class="terminal-output">→ Automation Projects</p>
+                            <p class="terminal-output">→ Technical Discussions</p>
+                            <p class="terminal-output">→ Collaboration Opportunities</p>
+                            <p><span class="prompt-small">$</span> <span class="cursor">_</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Aishwarya A | Built with passion for reliability</p>
+            <p class="footer-tech">Designed with HTML, CSS, and JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
